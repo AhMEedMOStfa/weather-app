@@ -1,0 +1,3 @@
+https://routeegypt.com/weather/
+
+https://www.weatherapi.com/   ->  free weather api

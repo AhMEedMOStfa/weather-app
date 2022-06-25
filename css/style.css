@@ -1,0 +1,112 @@
+small
+{
+    font-size: 0.8rem;
+}
+nav
+{
+    position: fixed;
+    z-index: 99;
+}
+.menu-item a
+{
+    padding: 5px 24px ;
+    border: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+    border-radius: 30px;
+
+}
+.menu-item:hover a
+{
+    
+   color: #009ad8 !important;
+   border: 2px solid #009ad8;
+}
+#mainContent .weather-bg
+{
+    background-image: url(../imgs/banner.png);
+    height: 80vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+#mainContent .find-form
+{
+    position: relative;
+}
+#mainContent .find-btn
+{
+    position: absolute;
+    top: 18%;
+    right: 2%;
+}
+#mainContent .today-header
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+#mainContent #todayDate
+{
+    position: absolute;
+    right: 1%;
+}
+#mainContent .today-items
+{
+    background-color: rgba(0, 0, 0, 0.8);
+ 
+}
+#mainContent #todayLocation
+{
+    font-size: 1.5rem;
+}
+#mainContent .today-temp
+{
+    position: relative;
+}
+#mainContent #todayTemp
+{
+    font-size: 5rem ;
+}
+#mainContent #todayCondition
+{
+    position: absolute;
+    right: 1%;
+    top: 25%;
+}
+#mainContent .next-day-items
+{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#mainContent .last-day-items
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+footer
+{
+    background-color: #262936;
+}
+#footerContent .find-form
+{
+    position: relative;
+}
+#footerContent .find-btn
+{
+    position: absolute;
+    top: 18%;
+    right: 2%;
+}
+#footerContent .social  
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid #009ad8 ;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+.social:hover
+{
+    background-color:#009ad8 ;
+    color: white;
+
+}

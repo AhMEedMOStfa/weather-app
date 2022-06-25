@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: black; color: #bfc1c8;">
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4 ">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="imgs/logo.png" alt="">
+              <div class="weather-title d-inline-block align-middle">
+                <h1 class=" fs-5 mb-0">Weather</h1>
+                <small class="">tagline goes here</small>
+              </div>
+              
+              
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              <li class="nav-item menu-item mx-4">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item menu-item mx-4">
+                <a class="nav-link text-white " aria-current="page" href="#">News</a>
+              </li>
+              <li class="nav-item menu-item mx-4">
+                <a class="nav-link  text-white" aria-current="page" href="#">Live Cameras</a>
+              </li>
+              <li class="nav-item menu-item mx-4">
+                <a class="nav-link text-white" aria-current="page" href="#">Photos</a>
+              </li>
+              <li class="nav-item menu-item mx-4">
+                <a class="nav-link text-white" aria-current="page" href="#">Contacts</a>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+
+    <section   id="mainContent">
+        <div class=" weather-bg">
+            <div class="search-location mx-auto py-5 w-75">
+               
+                  <div class="form-floating find-form ">
+                   
+                    <input type="text" class="form-control bg-dark text-white" id="searchBox" placeholder="search">
+                    <button id="searchBtn" class=" find-btn btn btn-outline-info">Find</button>
+                    <label class="text-white" for="searchBox">find location</label>
+                    
+                  </div>
+            </div>
+
+            <div class="container">
+                <div class="row gx-1">
+                    <div class="col-md-4">
+                        <div class="today-container">
+                            <div class="today-header  rounded-1">
+                                <span id="today" class=" p-2"></span>
+                                <span id="todayDate" class="px-2"></span>
+                            </div>
+                            <div class="today-items rounded-1">
+
+                                <h2 id="todayLocation" class=" py-4 ps-3 text-light"></h2>
+
+                                <div class="today-temp my-4">
+                                    <span id="todayTemp" class=" text-white">
+
+                                        
+                                    </span>
+                                    <span >
+                                        <img id="todayCondition" src="" class=" img-fluid" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="today-custom my-2">                                    
+                                    <span id="cloud" class=" text-primary ps-3 fs-3 "></span>
+                                </div>
+
+                                <div class="today-info my-2 p-2 d-flex align-items-center justify-content-between">
+                                    <div id="humidity" class=" ">
+                                        <img src="imgs/icon-umberella.png" class=" ps-3 img-fluid" alt="">
+                                        <span id="humidityValue">
+                                            
+                                        </span>
+                                    </div>
+                                    <div id="wind" class=" ">
+                                        <img src="imgs/icon-wind.png" class=" ps-3 img-fluid" alt="">
+                                        <span id="windVelocity">
+                                    
+                                        </span>
+                                    </div>
+                                    <div id="humidity">
+                                        <img src="imgs/icon-compass.png" class=" ps-3 img-fluid" alt="">
+                                        <span id="windDirection"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4  text-center">
+                        <div class="next-day">
+                            <div class=" today-header">
+                                <span id="tomorrowDay">Wed</span>
+                            </div>
+                            <div class="next-day-items">
+                                <div class="next-icon py-3">
+                                    <img src="" id="tomorrowIcon" class=" text-white" alt="">
+                                </div>
+                                <div class="next-large-temp py-3">
+                                    <span id="tomorrowLargeTemp" class=" fs-3 text-white"></span>
+                                </div>
+                                <div class="next-small-temp">
+                                    <span id="tomorrowSmallTemp" class=" fs-5"></span>
+                                </div>
+                                <div class="next-small-temp py-5">
+                                    <span id="tomorrowCondition" class=" fs-3 text-primary "></span>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-4  text-center">
+                        <div class="next-day">
+                            <div class=" today-header">
+                                <span id="lastDay">Thursday</span>
+                            </div>
+                            <div class="last-day-items">
+                                <div class="next-icon py-3">
+                                    <img src="" id="lastDayIcon" class=" text-white" alt="">
+                                </div>
+                                <div class="next-large-temp py-3">
+                                    <span id="lastDayLargeTemp" class=" fs-3 text-white"></span>
+                                </div>
+                                <div class="next-small-temp">
+                                    <span id="lastDaySmallTemp" class=" fs-5">12.3 <sup>o</sup>C</span>
+                                </div>
+                                <div class="next-small-temp py-5">
+                                    <span id="lastDayCondition" class=" fs-3  text-primary "></span>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+   
+      
+    </section>
+
+    <footer id="footerContent" class=" py-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="contacts">
+                        <div class="form-floating find-form ">
+                            <input type="text" class="form-control bg-dark text-white" id="floatingPassword" placeholder="search">
+                            <button class=" find-btn btn btn-outline-info">Subscribe</button>
+                            <label class="text-white" for="floatingPassword">Enter your Email Address</label>
+                          </div> 
+                    </div>
+                </div>
+
+                <div class=" offset-1 col-md-3">
+                    <div class="social-links d-flex align-items-center justify-content-center">
+                        <div class="social d-flex justify-content-center align-items-center mx-3">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="social d-flex justify-content-center align-items-center mx-3">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <div class="social d-flex justify-content-center align-items-center mx-3">
+                            <i class="fa fa-google-plus"></i>
+                        </div>
+                        <div class="social d-flex justify-content-center align-items-center mx-3">
+                            <i class="fa fa-pinterest"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class=" my-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
